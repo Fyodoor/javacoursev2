@@ -1,5 +1,7 @@
 package lesson_3;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         // 1 - Primitive type
@@ -65,6 +67,129 @@ public class Main {
         System.out.println(bool2);
         boolean bool2v2 = 10 > 5 && 10 < 6;
         System.out.println(bool2v2);
+        boolean bool2v3 = 10 > 5 || 10 < 6;
+        System.out.println(bool2v3);
+        boolean bool2v4 = 10 < 5 || 10 > 6;
+        System.out.println(!bool2v4);
+
+        // Операторы присвоения
+        // += с инкрементированием
+        // -= с инкрементированием
+        // *= с инкрементированием
+        // /= с инкрементированием
+
+        int f = 10;
+        f *= 3;
+        System.out.println(f);
+
+        /**
+         if (условие) {
+         //действие(-я), которые выполняются, если условие истинно;
+         }
+         else if (условие) {
+         //действие(-я), которые выполняются, если условие истинно;
+         }
+         else if (условие) {
+         //действие(-я), которые выполняются, если условие истинно;
+         }
+         else {
+         //действие(-я), которые выполняются, если условие истинно;
+         }
+         */
+
+        int age = 10;
+
+        if (age > 13) {
+            System.out.println("Your age is ok");
+        }
+        else if (age < 13 ) {
+            System.out.println("No, you can't go to the film");
+        }
+
+        int mathRate = 4;
+
+        if (mathRate == 5) {
+            System.out.println("Отлично");
+        }
+        else if (mathRate == 4) {
+            System.out.println("Хорошо");
+        }
+        else if (mathRate == 3) {
+            System.out.println("Удовлетворительно");
+        }
+        else if (mathRate == 2) {
+            System.out.println("Плохо");
+        }
+        else if (mathRate == 1) {
+            System.out.println("Отвратительно");
+        }
+        else {
+            System.out.println("Такой оценки не знаю");
+        }
+
+
+        /**
+         switch (ВыражениеДляВыбора) {
+         case  (Значение1):
+         Код1;
+         break;
+         case (Значение2):
+         Код2;
+         break;
+         ...
+         case (ЗначениеN):
+         КодN;
+         break;
+         default:
+         КодВыбораПоУмолчанию;
+         break;
+         }
+         * */
+
+        switch (mathRate) {
+            case 5 :
+                System.out.println("Отлично");
+                break;
+            case 4 :
+                System.out.println("Хорошо");
+                break;
+            case 3 :
+                System.out.println("Удовлетворительно");
+                break;
+            case 2 :
+                System.out.println("Плохо");
+                break;
+            case 1 :
+                System.out.println("Отвратительно");
+                break;
+            default:
+                System.out.println("Такой оценки не знаю");
+                break;
+        }
+        System.out.println();
+
+        Scanner scan = new Scanner(System.in);
+        int fromConsole = scan.nextInt();
+
+        switch (fromConsole) {
+            case 30 :
+                System.out.println("Погода жара");
+                break;
+            case 15 :
+                System.out.println("Погода сегодня теплая");
+                break;
+            case -10 :
+                System.out.println("Погода сегодня холодная");
+                break;
+            default:
+                System.out.println("Ощущения по погоде непонятны");
+                break;
+        }
+
+
+
+        System.out.println();
+
 
     }
 }
