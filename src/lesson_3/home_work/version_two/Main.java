@@ -17,7 +17,7 @@ class HomeWork {
         }
 
     }
-    
+
 
     void resultTask2() {
         System.out.println("Введите число");
@@ -29,91 +29,91 @@ class HomeWork {
             System.out.println("Число " + number + " не содержится в интервале.");
         }
     }
- 
-     
-        void resultTask3() {
-            System.out.println("Введите номер месяца");
-            int numberMonth = scanner.nextInt();
 
-            if ( (numberMonth >= 1 && numberMonth < 3) || (numberMonth == 12) ) {
-                System.out.println("Зима");
-            } else if ( numberMonth >= 3 && numberMonth < 6 ) {
-                System.out.println("Весна");
-            } else if ( numberMonth >= 6 && numberMonth < 9 ) {
-                System.out.println("Лето");
-            } else if ( numberMonth >= 9 && numberMonth < 12 ) {
-                System.out.println("Осень");
-            } else {
-                System.out.println("Такого месяца нет");
-            }
+
+    void resultTask3() {
+        System.out.println("Введите номер месяца");
+        int numberMonth = scanner.nextInt();
+
+        if ( (numberMonth >= 1 && numberMonth < 3) || (numberMonth == 12) ) {
+            System.out.println("Зима");
+        } else if ( numberMonth >= 3 && numberMonth < 6 ) {
+            System.out.println("Весна");
+        } else if ( numberMonth >= 6 && numberMonth < 9 ) {
+            System.out.println("Лето");
+        } else if ( numberMonth >= 9 && numberMonth < 12 ) {
+            System.out.println("Осень");
+        } else {
+            System.out.println("Такого месяца нет");
         }
-        
-        void resultTask4() {
-            System.out.println("Введите число");
-            int num = scanner.nextInt();
+    }
 
-            if (num > 0) {
-                num *= 2;
-                System.out.println(num);
-            } else if (num < 0) {
-                num += 1;
-                System.out.println(num);
-            } else {
-                System.out.println(num);
-            }
+    void resultTask4() {
+        System.out.println("Введите число");
+        int num = scanner.nextInt();
+
+        if (num > 0) {
+            num *= 2;
+            System.out.println(num);
+        } else if (num < 0) {
+            num += 1;
+            System.out.println(num);
+        } else {
+            System.out.println(num);
         }
+    }
 
-        void resultTask5() {
-            System.out.println("Введите год");
+    void resultTask5() {
+        System.out.println("Введите год");
 
-            int age = scanner.nextInt();
+        int age = scanner.nextInt();
 
-            if (age % 400 == 0) {
-                System.out.println("количество дней в этом году: 366");
-            } else if (age % 100 == 0) {
-                System.out.println("количество дней в этом году: 365");
-            } else if (age % 4 == 0) {
-                System.out.println("количество дней в этом году: 366");
-            }
-            else {
-                System.out.println("количество дней в этом году: 365");
-            }
+        if (age % 400 == 0) {
+            System.out.println("количество дней в этом году: 366");
+        } else if (age % 100 == 0) {
+            System.out.println("количество дней в этом году: 365");
+        } else if (age % 4 == 0) {
+            System.out.println("количество дней в этом году: 366");
         }
+        else {
+            System.out.println("количество дней в этом году: 365");
+        }
+    }
 
-        void resultTask6() {
-            System.out.println("Введите три числа");
-            int a = scanner.nextInt();
-            int b = scanner.nextInt();
-            int c = scanner.nextInt();
+    void resultTask6() {
+        System.out.println("Введите три числа");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
 
-            if ( (a + b) > c && (a + c) > b && (b + c) > a) {
-                System.out.println("Треугольник существует");
-            }
-            else {
-                System.out.println("Трейгольник не существует");
-            }
-
+        if ( (a + b) > c && (a + c) > b && (b + c) > a) {
+            System.out.println("Треугольник существует");
+        }
+        else {
+            System.out.println("Трейгольник не существует");
         }
 
-        void resultTask7() {
-            System.out.println("Введите кол-во минут");
-            double t = scanner.nextDouble();
+    }
 
-            t %= 5;
+    void resultTask7() {
+        System.out.println("Введите кол-во минут");
+        double t = scanner.nextDouble();
 
-            if (t >= 0 && t < 3) {
-                System.out.println("Зелёный");
-            }
-            else if (t >= 3 && t < 4) {
-                System.out.println("Желтый");
-            }
-            else if (t >= 4 && t < 5) {
-                System.out.println("Красный");
-            }
-            else {
-                System.out.println("Зелёный");
-            }
+        t %= 5;
+
+        if (t >= 0 && t < 3) {
+            System.out.println("Зелёный");
         }
+        else if (t >= 3 && t < 4) {
+            System.out.println("Желтый");
+        }
+        else if (t >= 4 && t < 5) {
+            System.out.println("Красный");
+        }
+        else {
+            System.out.println("Зелёный");
+        }
+    }
 
 }
 public class Main {
