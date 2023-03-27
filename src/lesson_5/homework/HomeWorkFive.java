@@ -179,7 +179,7 @@ public class HomeWorkFive {
 
         }
         for (int i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
+            System.out.print(numbers[i] + " ");
         }
 
     }
