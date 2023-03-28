@@ -69,11 +69,13 @@ public class HomeWorkFive {
 
     void Task2() {
         int [] numbers = new int[10];
-        int max = 0;
+
         System.out.println("Введите 10 чисел");
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = scanner.nextInt();
         }
+        int max = numbers[0];
+
         for (int i = 0; i < numbers.length; i++) {
             if ( max < numbers[i]) {
                 max = numbers[i];
