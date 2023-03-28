@@ -133,24 +133,23 @@ public class HomeWorkFive {
 
     void Task6() {
         int [] numbers = new int[20];
-        int max = 0;
-
 
         System.out.println("Введите 20 чисел");
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = scanner.nextInt();
+        }
 
+        int max = numbers[0];
+        int min = max;
+        for (int i = 0; i < numbers.length; i++) {
             if ( max < numbers[i]) {
                 max = numbers[i];
             }
-
-        }
-        int min = max;
-        for (int i = 0; i < numbers.length; i++) {
             if (min > numbers[i]) {
                 min = numbers[i];
             }
         }
+
         System.out.printf("Максимальное и минимальное значения в массиве: %s %d", max, min);
 
     }
