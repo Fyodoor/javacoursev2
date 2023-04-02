@@ -118,15 +118,14 @@ public class HomeWorkVersionTwo {
             for (int j = 0; j < linesArray.length; j++) {
                 if (linesArray[i] != null && i != j) {
                     if (linesArray[i].equals(linesArray[j])) {
-                        linesArray[i] = null;
+                        linesArray[j] = null;
                     }
                 }
             }
         }
+
         for (String c : linesArray) {
-            if (c != null) {
-                System.out.println(c);
-            }
+            System.out.println(c);
         }
     }
 }
