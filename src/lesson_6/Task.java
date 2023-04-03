@@ -20,14 +20,39 @@ public class Task {
         // Task 2
         //Check email of user
 
+//        String text = "Hello World";
+//        int w = text.indexOf('W');
+//        System.out.println(w);
+
         String email = scanner.nextLine();
-        char [] chars = email.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            if (chars[i] == '@') {
-                System.out.println("Собака есть");
-                return;
-            }
+        if (email.indexOf('@') == -1) {
+            System.out.println("Your email is not correct");
+            return;
         }
+        System.out.println();
+
+        // Task 3
+        //Check that '@' is only one
+
+        String[] split = email.split("@");
+
+        if (split.length != 2) {
+            System.out.println("Your email is not correct. You have 2 '@'");
+            return;
+        }
+
+        String partBeforeDog = split[0];
+        String partAfterDog = split[1];
+        if (partBeforeDog.startsWith(".") || partBeforeDog.endsWith(".")) {
+            System.out.println("Your email is not correct. Too many points");
+            return;
+        }
+        if (partAfterDog.startsWith(".") || partAfterDog.endsWith(".")) {
+            System.out.println("Your email is not correct. Too many points");
+            return;
+        }
+        System.out.println("Your email accepted");
+
 
     }
 }
