@@ -21,9 +21,7 @@ public class Test {
         }
 
         for (String c : linesArray) {
-
             System.out.println(c);
-
         }
     }
 }
