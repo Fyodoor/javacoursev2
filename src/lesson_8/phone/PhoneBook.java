@@ -29,4 +29,17 @@ public class PhoneBook {
         }
     }
 
+
+    //Домашняя работа
+    public Contact searchContact(String nameOfContact) {
+        return null;
+    }
+
+    public void deleteContact(String nameOfContact) {
+
+    }
+
+    public void editContact(String searchName, String newNameOfContact) {
+
+    }
 }
