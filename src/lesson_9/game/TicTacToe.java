@@ -11,7 +11,7 @@ public class TicTacToe {
     public TicTacToe() {
         scanner = new Scanner(System.in);
         random = new Random();
-        table = new char[3][3];
+        table = new char[5][5];
     }
 
     public void playGame() {
@@ -61,7 +61,7 @@ public class TicTacToe {
     public void turnHuman() {
         int x, y;
         do {
-            System.out.println("Enter x and y from [0...2");
+            System.out.println("Enter x and y from [0...2]");
             x = scanner.nextInt();
             y = scanner.nextInt();
 
@@ -71,7 +71,7 @@ public class TicTacToe {
     }
 
     public boolean isCellValid(int x, int y) {
-        if (x < 0 || x > 2 || y < 0 || y > 2) {
+        if (x < 0 || x > 5 || y < 0 || y > 5) {
             return false;
         }
         return table[x][y] == '.';
@@ -79,14 +79,28 @@ public class TicTacToe {
 
     public boolean checkWin(char symbol) {
         //horizontal
-        if (table[0][0]== symbol && table[0][1]== symbol && table[0][2]== symbol) return true;
-        if (table[1][0]== symbol && table[1][1]== symbol && table[1][2]== symbol) return true;
-        if (table[2][0]== symbol && table[2][1]== symbol && table[2][2]== symbol) return true;
+        if (table[0][0]== symbol && table[0][1]== symbol && table[0][2]== symbol && table[0][3] == symbol) return true;
+        if (table[0][1]== symbol && table[0][2]== symbol && table[0][3]== symbol && table[0][4] == symbol) return true;
+        if (table[1][0]== symbol && table[1][1]== symbol && table[1][2]== symbol && table[1][3] == symbol) return true;
+        if (table[1][1]== symbol && table[1][2]== symbol && table[1][3]== symbol && table[1][4] == symbol) return true;
+        if (table[2][0]== symbol && table[2][1]== symbol && table[2][2]== symbol && table[2][3] == symbol) return true;
+        if (table[2][1]== symbol && table[2][2]== symbol && table[2][3]== symbol && table[2][4] == symbol) return true;
+        if (table[3][0]== symbol && table[3][1]== symbol && table[3][2]== symbol && table[3][3] == symbol) return true;
+        if (table[3][1]== symbol && table[3][2]== symbol && table[3][3]== symbol && table[3][4] == symbol) return true;
+        if (table[4][0]== symbol && table[4][1]== symbol && table[4][2]== symbol && table[4][3] == symbol) return true;
+        if (table[4][1]== symbol && table[4][2]== symbol && table[4][3]== symbol && table[4][4] == symbol) return true;
 
         //vertical
-        if (table[0][0]== symbol && table[1][0]== symbol && table[2][0]== symbol) return true;
-        if (table[0][1]== symbol && table[1][1]== symbol && table[2][1]== symbol) return true;
-        if (table[0][2]== symbol && table[1][2]== symbol && table[2][2]== symbol) return true;
+        if (table[0][0]== symbol && table[1][0]== symbol && table[2][0]== symbol && table[3][0] == symbol) return true;
+        if (table[1][0]== symbol && table[2][0]== symbol && table[3][0]== symbol && table[4][0] == symbol) return true;
+        if (table[0][1]== symbol && table[1][1]== symbol && table[2][1]== symbol && table[3][1] == symbol) return true;
+        if (table[1][1]== symbol && table[2][1]== symbol && table[3][1]== symbol && table[4][1] == symbol) return true;
+        if (table[0][2]== symbol && table[1][2]== symbol && table[2][2]== symbol && table[3][2] == symbol) return true;
+        if (table[1][2]== symbol && table[2][2]== symbol && table[3][2]== symbol && table[4][2] == symbol) return true;
+        if (table[0][3]== symbol && table[1][3]== symbol && table[2][3]== symbol && table[3][3] == symbol) return true;
+        if (table[1][3]== symbol && table[2][3]== symbol && table[3][3]== symbol && table[4][3] == symbol) return true;
+        if (table[0][4]== symbol && table[1][4]== symbol && table[2][4]== symbol && table[3][4] == symbol) return true;
+        if (table[1][4]== symbol && table[2][4]== symbol && table[3][4]== symbol && table[4][4] == symbol) return true;
 
         //diagonal
         if (table[0][0]== symbol && table[1][1]== symbol && table[2][2]== symbol) return true;
