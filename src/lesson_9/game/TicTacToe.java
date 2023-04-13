@@ -34,6 +34,7 @@ public class TicTacToe {
             turnAI();
             printTable();
             if (checkWin('o')) {
+                System.out.println();
                 printTable();
                 System.out.println("AI WON");
                 break;
@@ -55,13 +56,14 @@ public class TicTacToe {
             for (int y = 0; y < table[x].length; y++) {
                 System.out.print(table[x][y] + " ");
             }
+            System.out.println();
         }
     }
 
     public void turnHuman() {
         int x, y;
         do {
-            System.out.println("Enter x and y from [0...2]");
+            System.out.println("Enter x and y from [0...4]");
             x = scanner.nextInt();
             y = scanner.nextInt();
 
@@ -71,7 +73,7 @@ public class TicTacToe {
     }
 
     public boolean isCellValid(int x, int y) {
-        if (x < 0 || x > 5 || y < 0 || y > 5) {
+        if (x < 0 || x > 4 || y < 0 || y > 4) {
             return false;
         }
         return table[x][y] == '.';
@@ -103,8 +105,14 @@ public class TicTacToe {
         if (table[1][4]== symbol && table[2][4]== symbol && table[3][4]== symbol && table[4][4] == symbol) return true;
 
         //diagonal
-        if (table[0][0]== symbol && table[1][1]== symbol && table[2][2]== symbol) return true;
-        if (table[0][2]== symbol && table[1][1]== symbol && table[2][0]== symbol) return true;
+        if (table[0][0]== symbol && table[1][1]== symbol && table[2][2]== symbol && table[3][3] == symbol) return true;
+        if (table[1][1]== symbol && table[2][2]== symbol && table[3][3]== symbol && table[4][4] == symbol) return true;
+        if (table[0][4]== symbol && table[1][3]== symbol && table[2][2]== symbol && table[3][1] == symbol) return true;
+        if (table[1][3]== symbol && table[2][2]== symbol && table[3][1]== symbol && table[4][0] == symbol) return true;
+        if (table[3][0]== symbol && table[2][1]== symbol && table[1][2]== symbol && table[0][3] == symbol) return true;
+        if (table[4][1]== symbol && table[3][2]== symbol && table[2][3]== symbol && table[1][4] == symbol) return true;
+        if (table[1][0]== symbol && table[2][1]== symbol && table[3][2]== symbol && table[4][3] == symbol) return true;
+        if (table[0][1]== symbol && table[1][2]== symbol && table[2][3]== symbol && table[3][4] == symbol) return true;
 
         return false;
     }
@@ -121,8 +129,8 @@ public class TicTacToe {
     private void turnAI() {
         int x, y;
         do {
-            x = random.nextInt(0, 2);
-            y = random.nextInt(0, 2);
+            x = random.nextInt(0, 4);
+            y = random.nextInt(0, 4);
         } while (!isCellValid(x, y));
 
         table[x][y] = 'o';
