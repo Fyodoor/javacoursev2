@@ -7,6 +7,7 @@ public class VideoDisk extends Disk {
     private int countOfMinutes;
 
 
+
     public VideoDisk() {
     }
 

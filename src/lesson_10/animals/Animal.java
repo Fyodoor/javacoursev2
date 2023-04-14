@@ -2,9 +2,11 @@ package lesson_10.animals;
 
 public class Animal {
     private String name;
-    private int age;
+    private Integer age;
 
     private String color;
+
+    private String parentName;
 
     public String getName() {
         return name;
@@ -14,7 +16,7 @@ public class Animal {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
@@ -28,6 +30,14 @@ public class Animal {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public String getParentName() {
+        return parentName;
+    }
+
+    public void setParentName(String parentName) {
+        this.parentName = parentName;
     }
 
     public void sayHello() {

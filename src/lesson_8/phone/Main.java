@@ -22,12 +22,16 @@ public class Main {
         //Поиск контакта
         System.out.println("Введите имя искомого контакта");
         phoneBook.searchContact(scanner.nextLine());
+        System.out.println();
+        phoneBook.printNameConntact(phoneBook.contacts);
 
         System.out.println();
 
         //Удаление контакта
         System.out.println("Введите имя котакта, который хотите удалить");
         phoneBook.deleteContact(scanner.nextLine());
+        System.out.println();
+        phoneBook.printNameConntact(phoneBook.contacts);
 
         System.out.println();
 

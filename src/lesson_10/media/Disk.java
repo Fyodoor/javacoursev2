@@ -4,7 +4,6 @@ public class Disk {
     private String name;
     private int year;
 
-    Disk [] boxOfDisks;
 
     public Disk() {
     }
@@ -27,6 +26,9 @@ public class Disk {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Disk{" +
+                "name='" + name + '\'' +
+                ", year=" + year +
+                '}';
     }
 }

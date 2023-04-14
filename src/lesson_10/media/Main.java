@@ -22,15 +22,15 @@ public class Main {
         audioDisk1.setSinger("Kino");
         audioDisk1.setCountOfTrack(14);
 
-        audioDisk2.setName("Kirpichi");
+        audioDisk2.setName("Sila uma");
         audioDisk2.setYear(2001);
-        audioDisk2.setSinger("Sila uma");
+        audioDisk2.setSinger("Kirpichi");
         audioDisk2.setCountOfTrack(15);
 
-        audioDisk3.setName(" ");
-        audioDisk3.setYear(1991);
+        audioDisk3.setName("Kolhozniy pank");
+        audioDisk3.setYear(1992);
         audioDisk3.setSinger("Sektor gaza");
-        audioDisk3.setCountOfTrack(14);
+        audioDisk3.setCountOfTrack(17);
 
         VideoDisk videoDisk1 = new VideoDisk();
         VideoDisk videoDisk2 = new VideoDisk();

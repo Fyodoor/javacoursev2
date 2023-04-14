@@ -34,12 +34,26 @@ public class Main {
          и старшеклассников.
          */
 
+        Util.printString("Начинаем");
+
         Cat cat = new Cat();
         Dog dog = new Dog();
+
         cat.setName("Snezhok");
+        cat.setAge(5);
+        cat.setCouch("Cat's place");
+
+        dog.setName("Sharik");
+        dog.setBone("Lovely bone");
+        dog.setAge(4);
+
+        System.out.println(cat.getName() + " and " + dog.getName() + " are the best friends");
 
         cat.sayHello();
         dog.sayHello();
+
+
+
 
 
     }

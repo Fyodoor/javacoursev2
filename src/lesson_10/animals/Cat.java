@@ -1,14 +1,14 @@
 package lesson_10.animals;
 
 public class Cat extends Animal{
-    private String coutch;
+    private String couch;
 
-    public String getCoutch() {
-        return coutch;
+    public String getCouch() {
+        return couch;
     }
 
-    public void setCoutch(String cautch) {
-        this.coutch = coutch;
+    public void setCouch(String cauch) {
+        this.couch = couch;
     }
 
     @Override
